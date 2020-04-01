@@ -36,7 +36,7 @@ export function Home() {
         </section>
       </section>
       <footer>
-        <section>A community that learns together grows together</section>
+        <section>A community that learns together grows together!!!</section>
       </footer>
     </>
   )
