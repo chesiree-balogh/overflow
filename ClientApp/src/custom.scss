@@ -13,6 +13,7 @@ code {
   border-color: #1861ac;
 }
 
+<<<<<<< HEAD
 main.hero {
   background-image: url('./images/hero.jpeg');
   height: 100vh;
@@ -51,4 +52,54 @@ main.hero {
 
 footer {
   text-align: center;
+=======
+//search page
+
+.searchArea {
+  margin-top: 3rem;
+}
+
+.searchArea input {
+  padding: 0.5rem 7rem;
+  border: 0.05rem solid #f8b195;
+  margin-top: 1rem;
+}
+
+.searchArea input:focus {
+  outline-color: #355c7d;
+}
+
+.searchArea button {
+  padding: 0.5rem 2rem;
+  margin-left: 1rem;
+  background-color: #f8b195;
+  border: none;
+  color: white;
+}
+
+.searchArea button:hover {
+  background-color: #f4bba5;
+  border: none;
+}
+
+.questionsTagged {
+  margin-top: 2rem;
+}
+
+.howToFilter {
+  display: flex;
+}
+
+.howToFilter p {
+  margin-right: 1rem;
+}
+
+.filterButton {
+  margin-left: 10rem;
+  padding: 0.5rem 2rem;
+
+  background-color: #355c7d;
+  border: none;
+  color: white;
+>>>>>>> 99b5f4ed9f363d19d799876decf5a6ec5bdaa550
 }
