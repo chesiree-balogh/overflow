@@ -53,8 +53,12 @@ export class NavMenu extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink tag={Link} className="text-dark" to="/counter">
-                    Counter
+                  <NavLink
+                    tag={Link}
+                    className="text-dark"
+                    to="/submit-question"
+                  >
+                    Submit Question
                   </NavLink>
                 </NavItem>
                 <NavItem>
