@@ -48,17 +48,47 @@ code {
 
 .howToFilter {
   display: flex;
+  justify-content: left;
+  margin-bottom: 3rem;
 }
 
 .howToFilter p {
   margin-right: 1rem;
 }
 
-.filterButton {
-  margin-left: 10rem;
+.howToFilter button {
+  margin-left: 15rem;
   padding: 0.5rem 2rem;
-
   background-color: #355c7d;
   border: none;
   color: white;
+}
+
+//Question Box
+
+.questionBox {
+  display: flex;
+  margin-top: 3rem;
+}
+
+hr {
+  border-top: 0.07rem solid #355c7d;
+}
+
+.left {
+  margin-left: 1rem;
+  line-height: 1rem;
+}
+
+.right {
+  margin-left: 7rem;
+}
+
+.question {
+  color: #355c7d;
+  font-size: 1.5rem;
+}
+
+.numberSymbol {
+  color: #f4bba5;
 }

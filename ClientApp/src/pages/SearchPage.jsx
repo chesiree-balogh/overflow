@@ -1,4 +1,5 @@
 import React from 'react'
+import QuestionBox from '../components/QuestionBox'
 
 const SearchPage = () => {
   return (
@@ -16,22 +17,12 @@ const SearchPage = () => {
         <p>Newest</p>
         <p>Active</p>
         <p>More</p>
-      </section>
-      <section>
-        <button className="filterButton">Filter</button>
+        <button>Filter</button>
       </section>
 
-      <section>
-        <p>#</p>
-        <p>Votes</p>
-        <p>#</p>
-        <p>Answers</p>
-      </section>
-      <section>
-        <p>Question</p>
-        <p>Description of question</p>
-        <p>Asked x mins ago</p>
-      </section>
+      <QuestionBox />
+      <QuestionBox />
+      <hr></hr>
     </>
   )
 }
