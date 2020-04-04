@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const submitquestion = () => {
+const SubmitQuestion = () => {
   return (
-    <main className="hero">
+    <main className="submit-question-hero">
       <h1 className="pageheader">
         {' '}
         Ask our development community any coding question!
@@ -17,4 +17,4 @@ const submitquestion = () => {
   )
 }
 
-export default submitquestion
+export default SubmitQuestion
