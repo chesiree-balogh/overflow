@@ -25,7 +25,10 @@ namespace overflow.Controllers
     [HttpGet("questions")]
     public async Task<ActionResult> SearchQuestions(string searchTerm)
     {
-      var results = _context.Questions.Where(w => w.Name.ToLower().Contains(searchTerm.ToLower()));
+      var results = _context.Questions.Where(w => w.Name.ToLower().Contains(searchTerm.ToLower()) ||
+      w.Description.ToLower().Contains(searchTerm.ToLower())
+      );
+
 
       return Ok(await results.ToListAsync());
     }
