@@ -8,7 +8,7 @@ namespace overflow.Models
   public partial class DatabaseContext : DbContext
   {
 
-
+    public DbSet<Question> Questions { get; set; }
 
 
     private string ConvertPostConnectionToConnectionString(string connection)
