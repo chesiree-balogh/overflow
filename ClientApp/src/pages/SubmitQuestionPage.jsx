@@ -1,15 +1,17 @@
 import React, { PureComponent } from 'react'
 import axios from 'axios'
-import { API_URL } from '../const'
+
+const INITIAL_STATE = {
+  questionTitle: '',
+  questionDescription: '',
+  message: '',
+}
 
 class SubmitQuestion extends PureComponent {
   constructor(props) {
     super(props)
 
-    this.state = {
-      questionTitle: '',
-      questionDescription: '',
-    }
+    this.state = INITIAL_STATE
   }
 
   handleChange = e => {
@@ -35,21 +37,34 @@ class SubmitQuestion extends PureComponent {
     e.preventDefault()
 
     axios
-      .post(`${API_URL}/api/Questions`, {
+      .post('/api/Questions', {
         name: this.state.questionTitle,
         description: this.state.questionDescription,
       })
       .then(response => {
-        debugger
-        console.log(response)
+        this.setState(prevState => ({
+          ...INITIAL_STATE,
+          message: 'Your question has been submitted!',
+        }))
       })
       .catch(error => {
-        debugger
-        console.log(error)
+        this.setState(prevState => ({
+          ...INITIAL_STATE,
+          message: 'Whoops! There was an error. Please try again.',
+        }))
+      })
+      .finally(() => {
+        setTimeout(() => {
+          this.setState(prevState => ({
+            ...prevState,
+            message: '',
+          }))
+        }, 1500)
       })
   }
 
   render() {
+    const { message, questionDescription, questionTitle } = this.state
     return (
       <main className="submit-question-hero">
         <h1 className="pageheader">
@@ -61,15 +76,18 @@ class SubmitQuestion extends PureComponent {
             className="searchbox"
             type="text"
             placeholder="How can your community help you today?"
+            value={questionTitle}
             onChange={this.handleChange}
           />
           <textarea
             id="description-field"
             placeholder="Question Description"
+            value={questionDescription}
             onChange={this.handleChange}
           />
           <input type="submit" value="Submit" />
         </form>
+        {message && <p>{message}</p>}
       </main>
     )
   }
