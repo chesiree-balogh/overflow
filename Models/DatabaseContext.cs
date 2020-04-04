@@ -10,6 +10,8 @@ namespace overflow.Models
 
     public DbSet<Question> Questions { get; set; }
 
+    public DbSet<Answer> Answers { get; set; }
+
 
     private string ConvertPostConnectionToConnectionString(string connection)
     {
