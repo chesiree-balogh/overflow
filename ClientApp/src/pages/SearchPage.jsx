@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import QuestionBox from '../components/QuestionBox'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import { faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState('')
+  const [results, setResults] = useState([])
+
   const searchForQuestion = async () => {
     const resp = await axios.get(
       `/api/search/questions?searchTerm=${searchTerm}`
     )
     console.log(resp.data)
+    setResults(resp.data)
   }
   return (
     <>
@@ -33,8 +38,24 @@ const SearchPage = () => {
         <button>Filter</button>
       </section>
 
-      <QuestionBox />
-      <QuestionBox />
+      <hr></hr>
+      <section className="questionBox">
+        <section className="left">
+          <button className="votingThumbs">
+            <FontAwesomeIcon icon={faThumbsUp} />
+          </button>
+          <button className="votingThumbs">
+            <FontAwesomeIcon icon={faThumbsDown} />
+          </button>
+        </section>
+        <section className="right">
+          <ul>
+            {results.map(question => {
+              return <li>{question.name}</li>
+            })}
+          </ul>
+        </section>
+      </section>
       <hr></hr>
     </>
   )

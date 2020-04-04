@@ -126,7 +126,7 @@ footer {
 
 .questionBox {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 hr {
@@ -136,6 +136,8 @@ hr {
 .left {
   margin-left: 1rem;
   line-height: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .right {
@@ -147,6 +149,15 @@ hr {
   font-size: 1.5rem;
 }
 
-.numberSymbol {
+.votingThumbs {
   color: #f4bba5;
+  font-size: 1.5rem;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.votingThumbs:focus {
+  outline-color: #f4bba5;
 }

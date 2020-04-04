@@ -62,10 +62,15 @@ export class NavMenu extends Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink tag={Link} className="text-dark" to="/search">
+                    Search
+                  </NavLink>
+                </NavItem>
+                {/* <NavItem>
                   <NavLink tag={Link} className="text-dark" to="/typescript">
                     Typescript
                   </NavLink>
-                </NavItem>
+                </NavItem> */}
               </ul>
             </Collapse>
           </Container>
