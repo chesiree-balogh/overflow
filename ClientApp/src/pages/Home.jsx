@@ -10,7 +10,7 @@ export function Home() {
         <h3>codes.</h3>
       </main>
       <section className="askAQuestionButton">
-        <Link to="/search" className="call-to-action">
+        <Link to="/submit-question" className="call-to-action">
           Ask a Question
         </Link>
       </section>
