@@ -58,7 +58,7 @@ export class NavMenu extends Component {
                     className="text-dark"
                     to="/submit-question"
                   >
-                    Submit Question
+                    Submit A Question
                   </NavLink>
                 </NavItem>
                 <NavItem>

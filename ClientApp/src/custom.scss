@@ -38,18 +38,36 @@ main.hero {
   height: 100vh;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  //moves text down to center of photo
+  // justify-content: center;
+  //moves text to the right to middle
+  // align-items: center;
   flex-direction: column;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: -1rem;
+  color: whitesmoke;
+}
+
+.hero h3 {
+  line-height: 1;
+}
+
+.hero section {
+  padding-top: 2.5rem;
+  padding-left: 0.75rem;
 }
 
 .askAQuestionButton {
   text-align: center;
   padding-top: 2rem;
   font-size: 2rem;
+}
+
+.askAQuestionButton button {
+  border: 0.2rem solid rgb(4, 102, 214);
+  border-radius: 5rem;
+  background-color: rgb(215, 224, 245);
 }
 
 .howItWorks {
@@ -71,11 +89,42 @@ main.hero {
 
 footer {
   text-align: center;
+  padding-bottom: 1rem;
 }
 
-.searchArea {
-  margin-top: 3rem;
+//////////////////////////////////
+@media (min-width: 10px) {
+  .hero h3 {
+    font-size: 1.35rem;
+  }
 }
+
+//////////////////////////////////
+@media (min-width: 700px) {
+  .hero h3 {
+    font-size: 2.1rem;
+    padding-left: 0.8rem;
+  }
+  .howItWorksList h4 {
+    font-size: 1.5rem;
+  }
+}
+
+//////////////////////////////////
+@media (min-width: 1000px) {
+  .hero h3 {
+    font-size: 2.8rem;
+    padding-left: 0.8rem;
+  }
+  .howItWorksList h4 {
+    font-size: 1.5rem;
+  }
+  .hero section {
+    padding-top: 2.75rem;
+  }
+}
+
+/////////////////////////////////
 
 .searchArea input {
   padding: 0.5rem 7rem;

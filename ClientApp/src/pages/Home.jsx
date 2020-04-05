@@ -5,14 +5,18 @@ export function Home() {
   return (
     <>
       <main className="hero">
-        <h3>An open community platform.</h3>
-        <h3>Designed to help anyone that</h3>
-        <h3>codes.</h3>
+        <section>
+          <h3>An open community platform.</h3>
+          <h3>Designed to help anyone that</h3>
+          <h3>codes.</h3>
+        </section>
       </main>
       <section className="askAQuestionButton">
-        <Link to="/submit-question" className="call-to-action">
-          Ask a Question
-        </Link>
+        <button>
+          <Link to="/submit-question" className="call-to-action">
+            Ask a Question
+          </Link>
+        </button>
       </section>
       <section class="howItWorks">
         <h2>How it Works</h2>
