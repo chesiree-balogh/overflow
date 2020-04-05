@@ -7,6 +7,7 @@ import HeyWorld from './pages/_template/HeyWorld'
 import NotFound from './pages/NotFound'
 import SubmitQuestionPage from './pages/SubmitQuestionPage'
 import SearchPage from './pages/SearchPage'
+import QuestionDetailsPage from './pages/QuestionDetailsPage'
 import './custom.scss'
 export default class App extends Component {
   static displayName = App.name
@@ -20,6 +21,11 @@ export default class App extends Component {
           <Route exact path="/counter" component={HelloWorld} />
           <Route exact path="/typescript" component={HeyWorld} />
           <Route exact path="/search" component={SearchPage} />
+          <Route
+            exact
+            path="/questions/:questionId"
+            component={QuestionDetailsPage}
+          />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Layout>

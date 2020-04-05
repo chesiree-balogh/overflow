@@ -37,7 +37,7 @@ class SubmitQuestion extends PureComponent {
     e.preventDefault()
 
     axios
-      .post('/api/Questions', {
+      .post('/api/questions', {
         name: this.state.questionTitle,
         description: this.state.questionDescription,
       })
