@@ -75,7 +75,7 @@ class SubmitQuestion extends PureComponent {
             id="title-field"
             className="searchbox"
             type="text"
-            placeholder="How can your community help you today?"
+            placeholder="Question Title"
             value={questionTitle}
             onChange={this.handleChange}
           />

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using overflow.Models;
 
-namespace overflow
+namespace overflow.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
@@ -31,8 +31,7 @@ namespace overflow
     [HttpGet("{id}")]
     public async Task<ActionResult<Question>> GetQuestion(int id)
     {
-      var question = await _context.Questions.FindAsync(id);
-
+      var question = await _context.Questions.Include(q => q.Answers).FirstOrDefaultAsync(f => f.Id == id);
       if (question == null)
       {
         return NotFound();
@@ -96,7 +95,6 @@ namespace overflow
 
       return Ok(answer);
     }
-
 
 
     // DELETE: api/Questions/5

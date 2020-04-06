@@ -18,24 +18,22 @@ const QuestionDetailsPage = props => {
     getQuestionDetails()
   }, [])
 
-  const getAnswers = async () => {
-    const resp = await axios.get(`api/questions/${questionId}/answers`)
-    console.log(resp.data)
-  }
+  // const getAnswers = async () => {
+  //   const resp = await axios.get(`api/questions/${questionId}/answers`)
+  //   console.log(resp.data)
+  // }
 
   const addAnswers = async () => {
     const resp = await axios.post(`api/questions/${questionId}/answers`, {
       description: answers,
     })
     console.log(resp.data)
-    setAnswers(resp.data)
+    // setAnswers(resp.data)
   }
 
   return (
     <>
-      <p>This is the question</p>
       <section>
-        <button onClick={getAnswers}>I want to see answers!</button>
         <ul>
           {question.answers.map(answers => {
             return <li className="answerDescription">{answers.description}</li>
@@ -43,7 +41,7 @@ const QuestionDetailsPage = props => {
         </ul>
       </section>
       <section>
-        <form className="answerQuestion">
+        <form className="answerQuestion" onSubmit={addAnswers}>
           <label>Do you want to answer this question?</label>
           <textarea
             placeholder="Answer here"
