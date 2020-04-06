@@ -1,4 +1,8 @@
 /* Provide sufficient contrast against white background */
+@import 'bootstrap';
+
+////////////////////////////////
+
 a {
   color: #0366d6;
 }
@@ -124,6 +128,15 @@ footer {
   }
 }
 
+/////////////////////////////////
+@media (min-width: 1440px) {
+  .hero h3 {
+    font-size: 3.4rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/////////////////////////////////
 /////////////////////////////////
 
 .searchArea input {
