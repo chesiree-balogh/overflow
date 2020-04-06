@@ -51,7 +51,7 @@ const SearchPage = () => {
           <ul>
             {results.map(question => {
               return (
-                <Link to="/questions/:questionId">
+                <Link to="/questions/:id">
                   <li className="questionName">{question.name}</li>
                 </Link>
               )

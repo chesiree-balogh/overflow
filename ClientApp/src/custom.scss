@@ -228,3 +228,39 @@ hr {
 .votingThumbs:focus {
   outline-color: #f4bba5;
 }
+
+// Question Details Page
+
+.answerQuestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.answerQuestion label {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #f8b195;
+}
+
+.answerQuestion textarea {
+  width: 90vw;
+  height: 30vh;
+  resize: none;
+}
+
+.answerQuestion textarea:focus {
+  outline-color: #355c7d;
+}
+
+.answerQuestion button {
+  padding: 1rem 5rem;
+  color: white;
+  background-color: #355c7d;
+  margin-top: 2rem;
+}
+
+.answerQuestion button:hover {
+  background-color: #f8b195;
+}

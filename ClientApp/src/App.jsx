@@ -21,11 +21,7 @@ export default class App extends Component {
           <Route exact path="/counter" component={HelloWorld} />
           <Route exact path="/typescript" component={HeyWorld} />
           <Route exact path="/search" component={SearchPage} />
-          <Route
-            exact
-            path="/questions/:questionId"
-            component={QuestionDetailsPage}
-          />
+          <Route exact path="/questions/:id" component={QuestionDetailsPage} />
           <Route exact path="*" component={NotFound} />
         </Switch>
       </Layout>
