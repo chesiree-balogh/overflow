@@ -224,7 +224,8 @@ footer {
 
 // Question Box
 
-.questionBox {
+.questionBox,
+.answerBox {
   display: flex;
   margin-top: 2rem;
 }
@@ -234,14 +235,15 @@ hr {
 }
 
 .left {
-  margin-left: 1rem;
+  margin-left: 2rem;
   line-height: 1rem;
   display: flex;
   flex-direction: column;
 }
 
 .right {
-  margin-left: 7rem;
+  margin-left: 6rem;
+  margin-top: 1rem;
 }
 
 .right li {
@@ -287,6 +289,7 @@ hr {
 
 .answerQuestion label {
   font-size: 1.5rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   color: #f8b195;
 }
@@ -310,4 +313,32 @@ hr {
 
 .answerQuestion button:hover {
   background-color: #f8b195;
+}
+
+.renderQuestion {
+  margin-left: 1rem;
+}
+
+.renderAnswer {
+  list-style: none;
+}
+
+.rightAnswers p {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.answerDescription {
+  font-size: 1rem;
+}
+
+.answerDate {
+  font-size: 0.75rem;
+  color: #355c7d;
+  padding-top: 3rem;
+}
+
+.answerFooter {
+  margin-top: 4rem;
+  color: #f8b195;
 }

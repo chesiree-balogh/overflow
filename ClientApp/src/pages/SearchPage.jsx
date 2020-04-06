@@ -37,37 +37,41 @@ const SearchPage = () => {
         <p>More</p>
         <button>Filter</button>
       </section>
-      <hr></hr>
-      <section className="questionBox">
-        <section className="left">
-          <button className="votingThumbs">
-            <FontAwesomeIcon icon={faThumbsUp} />
-          </button>
-          <button className="votingThumbs">
-            <FontAwesomeIcon icon={faThumbsDown} />
-          </button>
-        </section>
-        <section className="right">
-          <ul>
-            {results.map(question => {
-              return (
-                <Link to="/questions/{questionId}/answers">
-                  <li className="questionName">{question.name}</li>
-                </Link>
-              )
-            })}
-            {results.map(question => {
-              return (
-                <li className="questionDescription">{question.description}</li>
-              )
-            })}
-            {results.map(question => {
-              return <li className="questionDate">{question.createdAt}</li>
-            })}
-          </ul>
-        </section>
-      </section>
-      <hr></hr>
+
+      {results.map(question => {
+        const linkToAnswers = `/questions/${question.id}/answers`
+
+        return (
+          <>
+            <hr />
+            <section className="questionBox">
+              <section className="left">
+                <button className="votingThumbs">
+                  <FontAwesomeIcon icon={faThumbsUp} />
+                </button>
+                <button className="votingThumbs">
+                  <FontAwesomeIcon icon={faThumbsDown} />
+                </button>
+              </section>
+              <section className="right">
+                <ul>
+                  <>
+                    <li>
+                      <Link to={linkToAnswers} className="questionName">
+                        {question.name}
+                      </Link>
+                      <p className="questionDescription">
+                        {question.description}
+                      </p>
+                      <p className="questionDate">{question.createdAt}</p>
+                    </li>
+                  </>
+                </ul>
+              </section>
+            </section>
+          </>
+        )
+      })}
     </>
   )
 }

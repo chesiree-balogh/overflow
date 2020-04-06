@@ -23,7 +23,7 @@ export default class App extends Component {
           <Route exact path="/search" component={SearchPage} />
           <Route
             exact
-            path="/questions/{questionId}/answers"
+            path="/questions/:questionId/answers"
             component={QuestionDetailsPage}
           />
           <Route exact path="*" component={NotFound} />

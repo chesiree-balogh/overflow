@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace overflow.Models
 {
@@ -9,6 +10,8 @@ namespace overflow.Models
     public DateTime AnsweredAt { get; set; } = DateTime.Now;
 
     public int QuestionId { get; set; }
+
+    [JsonIgnore]
     public Question Question { get; set; }
   }
 }
