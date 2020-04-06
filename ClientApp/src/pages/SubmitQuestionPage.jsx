@@ -37,7 +37,7 @@ class SubmitQuestion extends PureComponent {
     e.preventDefault()
 
     axios
-      .post('/api/Questions', {
+      .post('/api/questions', {
         name: this.state.questionTitle,
         description: this.state.questionDescription,
       })
@@ -70,7 +70,7 @@ class SubmitQuestion extends PureComponent {
         <h1 className="pageheader">
           Ask our development community any coding question!
         </h1>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="submit-form">
           <input
             id="title-field"
             className="searchbox"
@@ -81,11 +81,12 @@ class SubmitQuestion extends PureComponent {
           />
           <textarea
             id="description-field"
+            className="description-box"
             placeholder="Question Description"
             value={questionDescription}
             onChange={this.handleChange}
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" className="submitbutton" />
         </form>
         {message && <p>{message}</p>}
       </main>

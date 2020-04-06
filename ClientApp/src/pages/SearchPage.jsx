@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons'
@@ -21,7 +22,7 @@ const SearchPage = () => {
         <p>Results for [{searchTerm}]</p>
         <input
           type="text"
-          placeholder="Ask a question"
+          placeholder="Search for a question"
           value={searchTerm}
           onChange={e => setSearchTerm(e.target.value)}
         ></input>
@@ -29,7 +30,6 @@ const SearchPage = () => {
       </section>
       <section>
         <p className="questionsTagged">Questions Tagged [{searchTerm}]</p>
-        <p># of questions</p>
       </section>
       <section className="howToFilter">
         <p>Newest</p>
@@ -37,7 +37,6 @@ const SearchPage = () => {
         <p>More</p>
         <button>Filter</button>
       </section>
-
       <hr></hr>
       <section className="questionBox">
         <section className="left">
@@ -51,7 +50,19 @@ const SearchPage = () => {
         <section className="right">
           <ul>
             {results.map(question => {
-              return <li>{question.name}</li>
+              return (
+                <Link to="/questions/:questionId">
+                  <li className="questionName">{question.name}</li>
+                </Link>
+              )
+            })}
+            {results.map(question => {
+              return (
+                <li className="questionDescription">{question.description}</li>
+              )
+            })}
+            {results.map(question => {
+              return <li className="questionDate">{question.createdAt}</li>
             })}
           </ul>
         </section>

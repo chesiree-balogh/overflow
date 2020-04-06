@@ -27,6 +27,32 @@ main.submit-question-hero {
   background-position: center 30px;
   display: flex;
   flex-direction: column;
+  grid-template-rows: 5rem 3rem 4rem 2rem 10rem;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.submit-form textarea {
+  text-align: center;
+}
+
+.submit-form > input,
+textarea {
+  margin: 15px 0;
+}
+
+.description-box {
+  width: 180px;
+  height: 90px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .pageheader {
@@ -34,8 +60,15 @@ main.submit-question-hero {
 }
 
 .searchbox {
-  width: 42.5%;
-  margin: 15% auto;
+  width: 300px;
+  text-align: center;
+}
+
+.submitbutton {
+  width: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 main.hero {
   background-image: url('./images/hero.jpeg');
@@ -128,6 +161,7 @@ footer {
   }
 }
 
+<<<<<<< HEAD
 /////////////////////////////////
 @media (min-width: 1440px) {
   .hero h3 {
@@ -138,6 +172,9 @@ footer {
 
 /////////////////////////////////
 /////////////////////////////////
+=======
+// Search Page
+>>>>>>> 8883660c9715bde5f8c8292cf9b8225491f813f9
 
 .searchArea input {
   padding: 0.5rem 7rem;
@@ -188,7 +225,7 @@ footer {
   color: white;
 }
 
-//Question Box
+// Question Box
 
 .questionBox {
   display: flex;
@@ -210,9 +247,23 @@ hr {
   margin-left: 7rem;
 }
 
-.question {
+.right li {
+  list-style: none;
+}
+
+.questionName {
   color: #355c7d;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.questionDescription {
+  margin-top: 1rem;
+}
+.questionDate {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
 }
 
 .votingThumbs {
