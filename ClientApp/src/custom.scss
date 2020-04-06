@@ -1,4 +1,8 @@
 /* Provide sufficient contrast against white background */
+// @import 'bootstrap';
+
+////////////////////////////////
+
 a {
   color: #0366d6;
 }
@@ -23,6 +27,32 @@ main.submit-question-hero {
   background-position: center 30px;
   display: flex;
   flex-direction: column;
+  grid-template-rows: 5rem 3rem 4rem 2rem 10rem;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.submit-form textarea {
+  text-align: center;
+}
+
+.submit-form > input,
+textarea {
+  margin: 15px 0;
+}
+
+.description-box {
+  width: 180px;
+  height: 90px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .pageheader {
@@ -30,8 +60,15 @@ main.submit-question-hero {
 }
 
 .searchbox {
-  width: 42.5%;
-  margin: 15% auto;
+  width: 300px;
+  text-align: center;
+}
+
+.submitbutton {
+  width: 100px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 main.hero {
   background-image: url('./images/hero.jpeg');
@@ -124,6 +161,16 @@ footer {
   }
 }
 
+/////////////////////////////////
+@media (min-width: 1440px) {
+  .hero h3 {
+    font-size: 3.4rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/////////////////////////////////
+/////////////////////////////////
 // Search Page
 
 .searchArea input {
