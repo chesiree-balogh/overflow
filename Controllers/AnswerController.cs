@@ -21,14 +21,14 @@ namespace overflow.Controllers
     }
 
     // GET: api/Answer
-    // [HttpGet]
+    [HttpGet("/questions/{questionId}/answers")]
     public async Task<ActionResult<IEnumerable<Answer>>> GetAnswers()
     {
       return await _context.Answers.ToListAsync();
     }
 
     // GET: api/Answer/5
-    [HttpGet]
+    [HttpGet("/questions/{questionId}/answers/{answerId}")]
     public async Task<ActionResult<Answer>> GetAnswer(int id)
     {
       var answer = await _context.Answers.FindAsync(id);
@@ -76,7 +76,7 @@ namespace overflow.Controllers
     // POST: api/Answer
     // To protect from overposting attacks, please enable the specific properties you want to bind to, for
     // more details see https://aka.ms/RazorPagesCRUD.
-    [HttpPost]
+    [HttpPost("/questions/{questionId}/answers")]
     public async Task<ActionResult<Answer>> PostAnswer(int questionId, Answer answer)
     {
       answer.QuestionId = questionId;
