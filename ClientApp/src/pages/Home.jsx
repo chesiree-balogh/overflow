@@ -67,7 +67,7 @@ export function Home() {
         </container>
       </section>
       <footer>
-        <section>A community that learns together grows together!!!</section>
+        <section>A community that learns together, grows together!!!</section>
       </footer>
     </>
   )
